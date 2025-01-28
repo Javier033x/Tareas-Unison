@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1737736815 source:c:\users\javii\onedrive\documentos\estructura de datos\pruebavector14012025\main.cpp
+	<iostream>
+	"Vector.hpp"
+
+1737738515 c:\users\javii\onedrive\documentos\estructura de datos\pruebavector14012025\vector.hpp
+	<iostream>
+
+1737738681 source:c:\users\javii\onedrive\documentos\estructura de datos\pruebavector14012025\vector.cpp
+	<cmath>
+	"Vector.hpp"
+
+1736998295 source:c:\users\javii\onedrive\documentos\estructura de datos pc\pruebavector14012025\main.cpp
+	<iostream>
+	"Vector.hpp"
+
+1736997196 c:\users\javii\onedrive\documentos\estructura de datos pc\pruebavector14012025\vector.hpp
+
+1736997790 source:c:\users\javii\onedrive\documentos\estructura de datos pc\pruebavector14012025\vector.cpp
+	<iostream>
+	<cmath>
+	"Vector.hpp"
+
+1736995663 source:c:\users\javii\onedrive\documentos\estructura de datos pc\prueba.cpp
+	<iostream>
+
