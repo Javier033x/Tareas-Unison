@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1738134001 source:c:\users\javii\onedrive\documentos\estructura de datos pc\clasematriz\main.cpp
+	<iostream>
+	"Matriz.hpp"
+
+1738135219 source:c:\users\javii\onedrive\documentos\estructura de datos pc\clasematriz\matriz.cpp
+	"Matriz.hpp"
+	<iostream>
+	<iomanip>
+
+1738135219 c:\users\javii\onedrive\documentos\estructura de datos pc\clasematriz\matriz.hpp
+	<iostream>
+
+1738166036 source:c:\users\javii\onedrive\documentos\estructura de datos\clasematriz\clasematriz\main.cpp
+	<iostream>
+	"Matriz.hpp"
+
+1738165945 c:\users\javii\onedrive\documentos\estructura de datos\clasematriz\clasematriz\matriz.hpp
+	<iostream>
+
+1738165956 source:c:\users\javii\onedrive\documentos\estructura de datos\clasematriz\clasematriz\matriz.cpp
+	"Matriz.hpp"
+	<iostream>
+	<iomanip>
+
