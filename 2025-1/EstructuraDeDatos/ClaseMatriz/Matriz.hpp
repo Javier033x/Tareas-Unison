@@ -33,12 +33,15 @@ public:
    double operator* (const Matriz v) const;   //Operador sobrecargado(Producto de dos matrices)
    Matriz operator* (const double escalar) const;   //Operador sobrecargado(Producto de matriz por escalar)
 
+   double* operator[](int i);
 
+
+   Matriz GaussJordan();
 
 private:
     int renglon;
     int columna;
-    int elemento[MAX_RENGLON][MAX_COLUMNA];
+    double elemento[MAX_RENGLON][MAX_COLUMNA];
 
 
 
