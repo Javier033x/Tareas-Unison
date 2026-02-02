@@ -1,0 +1,256 @@
+\documentclass[a4paper, 12pt]{article}
+
+% -- Language --
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+
+
+
+% ----- Fonts -----
+% -- Color --
+\usepackage{xcolor}
+\definecolor{azul}{RGB}{51,102,204}
+
+% -- Page Margin --
+\usepackage[margin=0.75in]{geometry}
+
+% -- Espaciados --
+\newcommand{\Pspace}{0.5cm}
+\newcommand{\Aspace}{0.2cm}
+
+\title
+{
+  Arquitectura de Computadoras \\
+  2026 - 1
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+    \begin{tabular}{r|l}
+        \textbf{Expediente} & \textbf{Nombre} \\ \hline
+        223210350 & Amaya Soria Angel Alberto \\
+        223216745 & Flores Salazar Luis Angel \\
+        223215039 & Miranda Sanchez Javier Leonardo \\
+        223203899 & Tostado Cortes Dante Alejandro
+    \end{tabular}
+\end{center}
+
+\rule{\linewidth}{0.3mm}
+
+
+
+% ---------- Tarea 1 ----------
+\vspace{0.3cm}
+
+\begin{center}
+    { \LARGE Tarea 1}
+\end{center}
+
+\begin{center}
+    \textbf{Nota:} En los ejercicios siguientes no escribir solo el resultado, se califica procedimiento y resultado.
+\end{center}
+
+\begin{enumerate}
+    % - Problema 1
+    \item Convierta los siguientes números a las bases indicadas.
+    
+    \begin{enumerate}[a)]
+        \item Convertir el entero -72 de base 10 a binario con 8 bits.
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} RESPUESTA }
+        \item Convertir el entero 11001110 de base 2 con 8 bits a base 10. 
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} RESPUESTA }
+        \item Convertir el número 1010010.101 de base 2 a base 16.
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} RESPUESTA }
+        \item Convertir el número 48.D de base 16 a base 2. 
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} RESPUESTA }
+        \item Mostrar cómo se representa el número de punto flotante -121.47 
+        (base 10) en el standard IEEE-754 con precisión sencilla. 
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} RESPUESTA }
+    \end{enumerate}
+
+    \newpage
+    % - Problema 2
+    \item Considerar dos implementaciones del mismo ISA. Las instrucciones se dividen 
+    en 4 clases: A, B, C y D. P1 tiene un reloj de 2 GHz y CPIs de 1, 2, 3 y 3. P2 
+    tiene un reloj de 3 GHz y CPIs de 2, 2, 4 y 4. Suponer que un programa hace 
+    siete mil millones de instrucciones con la siguiente mezcla: 10\% de A, 20\% de 
+    B, 50\% de C y 20\% de D. Responder las siguientes preguntas: 
+
+    \begin{enumerate}[(a)]
+        \item ¿Cuál implementación es más rápida? 
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} 
+        Instrucciones por clase: \\
+        $A = 10\% = 7 \times10^{9} \cdot 0{.}1 = 7\times10^{8}$ \\
+        $B = 20\% = 7 \times10^{9} \cdot 0{.}2 = 14\times10^{8}$ \\
+        $C = 50\% = 7 \times10^{9} \cdot 0{.}5 = 35\times10^{8}$ \\
+        $D = 20\% = 7 \times10^{9} \cdot 0{.}2 = 14\times10^{8}$ \\ \\ 
+        $P1:$ \\ 
+        $CPIs$ 
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        $A=1$ & $B=2$ & $C=3$ & $D=3$  \\
+        \hline
+        \end{tabular} \\
+        $CiclosTotalesP1 = (1 \cdot 7 \times10^{8})+(2 \cdot 14 \times 10^{8})+ (3 \cdot 35 \times 10^{8})+(3 \cdot 14 \times 10^{8}) = 18{.}2\times10^{9}$ \\
+        $Tiempo1=\frac{18{.}2\times10^{9}}{2\times10^{9}} = 9{.}1 $ Segundos
+        \\ \\
+        $P2:$ \\ 
+        $CPIs$ 
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        $A=2$ & $B=2$ & $C=4$ & $D=4$  \\
+        \hline
+        \end{tabular} \\
+        $CiclosTotalesP2 = (2 \cdot 7 \times10^{8})+(2 \cdot 14 \times 10^{8})+ (4 \cdot 35 \times 10^{8})+(4 \cdot 14 \times 10^{8}) = 23{.}8\times10^{9}$ \\
+        $Tiempo1=\frac{23{.}8\times10^{9}}{3\times10^{9}} = 7{.}93 $ Segundos\\ \\
+        Respuesta: La implementación P2 es más rápida
+        }
+        \item ¿Cuál es el CPI del programa en cada implementación? 
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} 
+        Instrucciones por clase, $CPIs1, CPIs2:$ \\
+        $A = 10\%, 1, 2$ \\
+        $B = 20\%, 2, 2$ \\
+        $C = 50\%, 3, 4$ \\
+        $D = 20\%, 3, 4$ \\ \\
+        $CPI1 = (0{.}1\cdot1) + (0{.}2\cdot2)+(0{.}5\cdot3)+(0{.}2\cdot3) = 2.6$  \\
+        $CPI2 = (0{.}1\cdot2) + (0{.}2\cdot2)+(0{.}5\cdot4)+(0{.}2\cdot4) = 3{.}4$ \\
+        }
+        \item ¿Cuántos ciclos hace el programa en cada implementación? 
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} 
+        Tomamos los ciclos totales del ejercicio 2A \\
+        $CiclosTotalesP1 = 18{.}2\times10^{9}$ \\
+        $CiclosTotalesP2 = 23{.}8\times10^{9}$
+        }
+        \item ¿Cuál es la velocidad pico de cada implementación? 
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} 
+        $VelocidadPico = \frac{Frecuencia}{CPIMinimo}$ \\
+        $VelocidadPico1 = \frac{2\times10^{9}}{1} = 2\times10^{9}$ instrucciones/s \\
+        $VelocidadPico2 = \frac{3\times10^{9}}{2} = 1{.}5\times10^{9}$ instrucciones/s  
+        }
+    \end{enumerate}
+
+    \newpage
+    % - Problema 3
+    \item Suponer que, para un programa, el compilador A genera un número de 
+    instrucciones de 1.0E9 y un tiempo de ejecución de 1.1 s, mientras que el 
+    compilador B genera un número de instrucciones de instrucciones de 1.2E9 y 
+    un tiempo de ejecución de 1.5 s.
+
+    \begin{enumerate}[(a)]
+        \item Encontrar el CPI promedio para cada programa, dado que el 
+        procesador tiene un ciclo de reloj de 1 ns. 
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} RESPUESTA }
+        \item Suponer que los programas compilados se ejecutan en dos 
+        procesadores diferentes. Si los tiempos de ejecución en ambos 
+        procesadores son iguales, ¿Cuánto más rápido es el reloj del procesador 
+        que ejecuta el código del compilador A en comparación con el reloj del 
+        procesador que ejecuta el código del compilador B?
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} RESPUESTA }
+        \item Se desarrolla un nuevo compilador C que utiliza solo 6.0E8 
+        instrucciones y tiene un CPI promedio de 1.1. ¿Cuál es el speedup al usar 
+        este nuevo compilador en comparación con usar el compilador A o el 
+        compilador B en el procesador original?
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} RESPUESTA }
+    \end{enumerate}
+    
+    \newpage
+    % - Problema 3
+    \item Suponer que a una computadora se le cambia la tarjeta gráfica por otra y que un benchmark tardaba en correr 90 segundos usando la tarjeta original. Al correr el benchmark con la tarjeta nueva se detecta un speedup de 1.5. ¿Qué tan rápida es la nueva tarjeta gráfica si se sabe que el benchmark pasa el 40\% del tiempo ejecutando instrucciones gráficas?
+
+    \begin{enumerate}[(a)]
+        \item Plantear claramente la ecuación a resolver.
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} 
+            Usar ley de Amdahl, el speedup total de un sistema está dado por:
+
+            \[
+            S_{total} = \frac{1}{(1 - f) + \frac{f}{S_{mejorado}}}
+            \]
+            
+            donde:
+            \begin{itemize}
+                \item $S_{total}$ es el speedup total del programa,
+                \item $f$ es la fracción del tiempo de ejecución que se ve mejorada,
+                \item $S_{mejorado}$ es el speedup de la parte mejorada del sistema.
+            \end{itemize}
+            
+            La parte que se mejora aqui es la de las instrucciones gráficas, por lo que:
+            
+            \[
+            S_{total} = 1{.}5
+            \]
+            \[
+            f = 0{.}40
+            \]
+            \[
+            1 - f = 0{.}60
+            \]
+            
+            Sustituyendo estos valores en la ecuación da:
+            
+            \[
+            1{.}5 = \frac{1}{0{.}60 + \frac{0{.}40}{S_{GPU}}}
+            \]
+            
+            Esa es la ecuación que represnta el speedup de la nueva tarjeta gráfica.}
+        \item Resolver la ecuación correctamente.
+        % Respuesta:
+        \vspace{\Aspace} \par
+        { \color{azul} 
+            Despejando $S_{GPU}$:
+
+            \[
+            \frac{1}{1{.}5} = 0{.}60 + \frac{0{.}40}{S_{GPU}}
+            \]
+            
+            \[
+            0{.}6667 = 0{.}60 + \frac{0{.}40}{S_{GPU}}
+            \]
+            
+            
+            \[
+            0{.}0667 = \frac{0{.}40}{S_{GPU}}
+            \]
+            
+            
+            \[
+            S_{GPU} = \frac{0{.}40}{0{.}0667}
+            \]
+            
+            \[
+            \textbf{S_{GPU} \approx 6}
+            \]
+        }
+    \end{enumerate}
+    
+\end{enumerate}
+\end{document}
