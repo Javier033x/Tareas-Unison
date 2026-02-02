@@ -163,7 +163,32 @@
         procesador tiene un ciclo de reloj de 1 ns. 
         % Respuesta:
         \vspace{\Aspace} \par
-        { \color{azul} RESPUESTA }
+        { \color{azul} 
+        Formula a usar: \\
+        $T = I\cdot CPI \cdot T_{c}$ \\
+        $CPI = \frac{T}{I \cdot T_{c}}$ \\ \\
+        Valor de $T_{c} =1 ns=1\times10^{-9}$ \\
+        \begin{itemize}
+            \item Compilador A: \\
+            Datos: \\
+            $I = 1\times 10^{9}$ \\
+            $T = 1{.}1 $ s \\
+            Proceso: \\
+            $CPI_{A} = \frac{1{.}1}{(1\times 10^{9})\cdot (1\times10^{-9})}$
+            $CPI_A=\frac{1{.}1}{1}=1{.}1$  
+            \item Compilador B: \\
+            Datos: \\
+            $I = 1{.}2\times 10^{9}$ \\
+            $T = 1{.}5 $ s \\
+            Proceso: \\
+            $CPI_{B} = \frac{1{.}5}{(1{.}2\times 10^{9})\cdot (1\times10^{-9})}$ \\
+            $CPI_B=\frac{1{.}5}{1{.}2}=1{.}25$  
+            
+        \end{itemize}
+        
+        
+        
+        }
         \item Suponer que los programas compilados se ejecutan en dos 
         procesadores diferentes. Si los tiempos de ejecución en ambos 
         procesadores son iguales, ¿Cuánto más rápido es el reloj del procesador 
@@ -171,14 +196,46 @@
         procesador que ejecuta el código del compilador B?
         % Respuesta:
         \vspace{\Aspace} \par
-        { \color{azul} RESPUESTA }
+        { \color{azul} 
+        $T_A = T_B$, pero en diferentes procesadores \\
+        Formula a usar: \\
+        $T = I \cdot CPI \cdot T_C$ \\
+        $I_A \cdot CPI_A \cdot T_{CA} = I_B \cdot CPI_B \cdot T_{CB}$ \\
+        $f = \frac{1}{T_C}$ \\
+        $\frac{T_{CA}}{T_{CB}} = \frac{I_B \cdot CPI_B}{I_A \cdot CPI_A} = \frac{(1{.}2\times10^9)\cdot(1{.}25)}{(1\times10^9)\cdot(1{.}1)}$ \\
+        $\frac{T_{CA}}{T_{CB}} = \frac{1{.}5}{1{.}1}$ \\
+        $f_A = \frac{1}{1{.}5}= 0{.}6$ \\
+        $f_B= \frac{1}{1{.}1}= 0{.}9$ \\
+        $\frac{f_A}{f_B}=\frac{0{.}6}{0{.}9} \approx 0{.}6666$
+    
+        
+        
+        
+        
+        
+        }
+        \newpage
         \item Se desarrolla un nuevo compilador C que utiliza solo 6.0E8 
         instrucciones y tiene un CPI promedio de 1.1. ¿Cuál es el speedup al usar 
         este nuevo compilador en comparación con usar el compilador A o el 
         compilador B en el procesador original?
         % Respuesta:
         \vspace{\Aspace} \par
-        { \color{azul} RESPUESTA }
+        { \color{azul} 
+        Datos:
+        $I= 6\times10^8$ \\
+        $CPI = 1{.}1$ \\
+        $T_A = 1{.}1$ s \\
+        $T_B = 1{.}5$ s \\ \\
+        Formulas a usar: \\
+        $SpeedUP = \frac{T_A}{T_C}$ \\
+        $T_C = I \cdot CPI \cdot T_c$ \\ \\
+        Proceso: \\
+        $T_C = (6\times10^8)\cdot(1{.}1)\cdot(1\times10^{-9})$ \\
+        $T_C = 0{.}66$ s \\
+        $SpeedUP_{C/A} = \frac{1{.}1}{0{.}66} = 1{.}67$ \\
+        $SpeedUP_{C/B} = \frac{1{.}5}{0{.}66} = 2{.}27$
+        }
     \end{enumerate}
     
     \newpage
@@ -247,7 +304,7 @@
             \]
             
             \[
-            \textbf{S_{GPU} \approx 6}
+            S_{GPU} \approx 6
             \]
         }
     \end{enumerate}
