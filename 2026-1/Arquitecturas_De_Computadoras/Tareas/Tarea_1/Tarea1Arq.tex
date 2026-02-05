@@ -62,24 +62,120 @@
         \item Convertir el entero -72 de base 10 a binario con 8 bits.
         % Respuesta:
         \vspace{\Aspace} \par
-        { \color{azul} RESPUESTA }
+        { \color{azul} 
+        Conversion del valor absoluto 72: \\ \\
+        \begin{tabular}{|c|c|c|}
+        \hline
+        Division & Cociente & Residuo \\
+        $\frac{72}{2}$ & 36 & 0 \\
+        $\frac{36}{2}$ & 18 & 0 \\
+        $\frac{18}{2}$ & 9 & 0 \\
+        $\frac{9}{2}$ & 4 & 1 \\
+        $\frac{4}{2}$ & 2 & 0 \\
+        $\frac{2}{2}$ & 1 & 0 \\
+        $\frac{1}{2}$ & 0 & 1\\
+        \hline
+        \end{tabular} \\ \\
+
+        $72_{10} = 01001000_2$ \\
+        Intercambiamos ceros por unos y viceversa. \\
+        Numero Invertido: $10110111$ \\ 
+        Sumamos 1 al valor invertido: $10111000$ \\
+        $-72_{10} =10111000_2 $
+        
+        }
         \item Convertir el entero 11001110 de base 2 con 8 bits a base 10. 
         % Respuesta:
         \vspace{\Aspace} \par
-        { \color{azul} RESPUESTA }
+        { \color{azul} 
+            $x = (1\cdot2^7) + (1\cdot2^6) + (0\cdot2^5) + (0\cdot2^4) + (1\cdot2^3) +(1\cdot2^2) + (1\cdot2^1) + (0\cdot2^0)$ \\
+            $x = (1\cdot128) + (1\cdot64) + (0\cdot32) + (0\cdot16) + (1\cdot8) +(1\cdot4) + (1\cdot2) + (0\cdot1)$ \\
+            $x = 128 + 64 + 8 + 4 + 2 = 206$
+        }
         \item Convertir el número 1010010.101 de base 2 a base 16.
         % Respuesta:
         \vspace{\Aspace} \par
-        { \color{azul} RESPUESTA }
+        { \color{azul} 
+        Agregar los ceros necesarios: \\
+        $01010010{.}1010$ \\
+        Dividir en bloques: \\
+        $0101-0010{.}-1010$ \\
+        Convertir cada bloque de 4 digitos a hexadecimal: \\
+        $52.A_{16}$
+        
+        }
         \item Convertir el número 48.D de base 16 a base 2. 
         % Respuesta:
         \vspace{\Aspace} \par
-        { \color{azul} RESPUESTA }
+        { \color{azul} 
+        $4 = 0100$ \\
+        $8=1000$ \\
+        $D=1101$ \\
+        Juntamos todo: \\
+        $01001000{.}1101_2$
+        
+        }
         \item Mostrar cómo se representa el número de punto flotante -121.47 
         (base 10) en el standard IEEE-754 con precisión sencilla. 
         % Respuesta:
         \vspace{\Aspace} \par
-        { \color{azul} RESPUESTA }
+        { \color{azul} 
+        El número es negativo, por lo tanto: \\
+        $S = 1$ 
+        
+        Conversión del valor absoluto $121{.}47_{10}$ a binario:
+        
+        Parte entera: 
+        $121_{10} = 1111001_2$
+        
+        Parte fraccionaria: \\
+        $0{.}47 = \frac{47}{100}$ 
+        
+        Multiplicaciones sucesivas por 2: \\
+        
+        \begin{tabular}{|c|c|c|}
+        \hline
+        Paso & Resultado & Bit \\
+        \hline
+        $0{.}47 \times 2 = 0{.}94$ & 0.94 & 0 \\
+        $0{.}94 \times 2 = 1{.}88$ & 0.88 & 1 \\
+        $0{.}88 \times 2 = 1{.}76$ & 0.76 & 1 \\
+        $0{.}76 \times 2 = 1{.}52$ & 0.52 & 1 \\
+        $0{.}52 \times 2 = 1{.}04$ & 0.04 & 1 \\
+        $0{.}04 \times 2 = 0{.}08$ & 0.08 & 0 \\
+        $0{.}08 \times 2 = 0{.}16$ & 0.16 & 0 \\
+        $0{.}16 \times 2 = 0{.}32$ & 0.32 & 0 \\
+        $0{.}32 \times 2 = 0{.}64$ & 0.64 & 0 \\
+        $0{.}64 \times 2 = 1{.}28$ & 0.28 & 1 \\
+        $0{.}28 \times 2 = 0{.}56$ & 0.56 & 0 \\
+        $0{.}56 \times 2 = 1{.}12$ & 0.12 & 1 \\
+        $0{.}12 \times 2 = 0{.}24$ & 0.24 & 0 \\
+        $0{.}24 \times 2 = 0{.}48$ & 0.48 & 0 \\
+        $0{.}48 \times 2 = 0{.}96$ & 0.96 & 0 \\
+        $0{.}96 \times 2 = 1{.}92$ & 0.92 & 1 \\
+        $0{.}92 \times 2 = 1{.}84$ & 0.84 & 1 \\
+        \hline
+        \end{tabular} \\ 
+        
+        Parte fraccionaria en binario: \\
+        $0{.}47_{10} = 0{.}01111000010100011_2$ 
+        
+        Número completo en binario: \\
+        $121{.}47_{10} = 1111001{.}01111000010100011_2$ \\ \\
+        
+        Normalización: \\
+        $1{.}11100101111000010100011_2 \times 2^6$ 
+        
+        Cálculo del exponente: \\
+        $E = 6 + 127 = 133_{10} = 10000101_2$ \\ \\
+        Representación IEEE-754 en precisión sencilla: \\
+        
+        \[
+        \boxed{
+        1\;\;10000101\;\;11100101111000010100011
+        }
+        \]
+        }
     \end{enumerate}
 
     \newpage
@@ -130,7 +226,7 @@
         $B = 20\%, 2, 2$ \\
         $C = 50\%, 3, 4$ \\
         $D = 20\%, 3, 4$ \\ \\
-        $CPI1 = (0{.}1\cdot1) + (0{.}2\cdot2)+(0{.}5\cdot3)+(0{.}2\cdot3) = 2.6$  \\
+        $CPI1 = (0{.}1\cdot1) + (0{.}2\cdot2)+(0{.}5\cdot3)+(0{.}2\cdot3) = 2{.}6$  \\
         $CPI2 = (0{.}1\cdot2) + (0{.}2\cdot2)+(0{.}5\cdot4)+(0{.}2\cdot4) = 3{.}4$ \\
         }
         \item ¿Cuántos ciclos hace el programa en cada implementación? 
@@ -203,15 +299,7 @@
         $I_A \cdot CPI_A \cdot T_{CA} = I_B \cdot CPI_B \cdot T_{CB}$ \\
         $f = \frac{1}{T_C}$ \\
         $\frac{T_{CA}}{T_{CB}} = \frac{I_B \cdot CPI_B}{I_A \cdot CPI_A} = \frac{(1{.}2\times10^9)\cdot(1{.}25)}{(1\times10^9)\cdot(1{.}1)}$ \\
-        $\frac{T_{CA}}{T_{CB}} = \frac{1{.}5}{1{.}1}$ \\
-        $f_A = \frac{1}{1{.}5}= 0{.}6$ \\
-        $f_B= \frac{1}{1{.}1}= 0{.}9$ \\
-        $\frac{f_A}{f_B}=\frac{0{.}6}{0{.}9} \approx 0{.}6666$
-    
-        
-        
-        
-        
+        $\frac{T_{CA}}{T_{CB}} = \frac{1{.}5}{1{.}1} = 1{.}36$ \\ 
         
         }
         \newpage
@@ -233,8 +321,8 @@
         Proceso: \\
         $T_C = (6\times10^8)\cdot(1{.}1)\cdot(1\times10^{-9})$ \\
         $T_C = 0{.}66$ s \\
-        $SpeedUP_{C/A} = \frac{1{.}1}{0{.}66} = 1{.}67$ \\
-        $SpeedUP_{C/B} = \frac{1{.}5}{0{.}66} = 2{.}27$
+        $SpeedUP_{A/C} = \frac{1{.}1}{0{.}66} = 1{.}67$ \\
+        $SpeedUP_{B/C} = \frac{1{.}5}{0{.}66} = 2{.}27$
         }
     \end{enumerate}
     
