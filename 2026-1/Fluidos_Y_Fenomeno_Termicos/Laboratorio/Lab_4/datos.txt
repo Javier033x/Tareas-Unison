@@ -1,0 +1,13 @@
+1 Miilitro de Presion
+    Altura_1 = 25.5 cm
+    Altura_2 = 28.5 cm
+    Altura_3 = 31.5 cm
+    Altura_4 = 34.5 cm
+    Altura_5 = 37.5 cm
+
+1 Mililtro de Succion
+    Altura_1 = 25.5 cm
+    Altura_2 = 22.5 cm
+    Altura_3 = 19.5 cm
+    Altura_4 = 16.5 cm
+    Altura_5 = 13.5 cm
